@@ -1,0 +1,11 @@
+# Hugging Face Space Configuration
+# For deploying to Hugging Face Spaces
+
+title = "Diversified Shipping App"
+emoji = "🚀"
+colorFrom = "blue"
+colorTo = "purple"
+sdk = "docker"
+app_port = "7860"
+
+[models]

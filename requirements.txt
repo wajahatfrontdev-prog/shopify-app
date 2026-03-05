@@ -1,0 +1,5 @@
+# Python dependencies for Hugging Face deployment
+# Diversified Shipping App
+
+Flask==3.0.0
+gunicorn==21.2.0
