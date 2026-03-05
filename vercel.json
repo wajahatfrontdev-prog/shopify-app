@@ -1,22 +1,23 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "build/server/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "build/client/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/build/server/index.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/api/index.js",
-      "headers": {
-        "Cache-Control": "no-cache"
-      }
+      "dest": "/build/client/$1"
     }
-  ],
-  "functions": {
-    "api/index.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }
