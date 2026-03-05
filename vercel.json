@@ -1,11 +1,6 @@
 {
   "version": 2,
   "buildCommand": "prisma generate && prisma migrate deploy && npm run build",
-  "functions": {
-    "api/index.js": {
-      "maxDuration": 30
-    }
-  },
   "routes": [
     {
       "src": "/build/client/(.*)",
