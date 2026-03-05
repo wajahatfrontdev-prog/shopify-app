@@ -3,7 +3,6 @@
   "buildCommand": "prisma generate && prisma migrate deploy && npm run build",
   "functions": {
     "api/index.js": {
-      "runtime": "nodejs20.x",
       "maxDuration": 30
     }
   },
